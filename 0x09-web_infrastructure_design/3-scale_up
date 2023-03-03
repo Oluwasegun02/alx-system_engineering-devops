@@ -1,0 +1,12 @@
+https://miro.com/app/board/uXjVOfMRh90=/ 
+
+Specifics About This Infrastructure
+-----------------------------------
+1)We now have 3 servers. We distributed the application server, webserver and database with in their own server. Now they became a cluster server which is what happens when a group of servers works as a unit We will also add another HAproxy loadbalancer to distribute work load among them. This load balancer will work with the other load balancer to ditribute the work load among the servers.
+2)The addition of a firewall between each server, this we protects each server from unwanted and unauthorized users rather than protecting a single server
+
+Issues With This Infrastructure
+-------------------------------
+
+ High maintenance costs.
+
