@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+cat >> ~/.ssh/config <<EOF
+Host 8c9f6e0a1e54
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
+EOF
