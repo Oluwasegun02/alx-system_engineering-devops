@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Install nginx
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# Configure nginx to listen on port 80
+sed -i 's/# listen 80 default_server;/listen 80 default_server;/g' /etc/nginx/sites-available/default
+
+# Restart nginx
+sudo service nginx restart
+
+# Create index.html with "Hello World!" string
+echo "Hello World!" > /var/www/html/index.html
+
+# Test nginx configuration by making a GET request to root /
+response=$(curl -s http://localhost)
+if [[ $response == *"Hello World!"* ]]; then
+  echo "Nginx is properly configured and serving the Hello World! string."
+else
+  echo "There was an error configuring Nginx."
+fi
+
