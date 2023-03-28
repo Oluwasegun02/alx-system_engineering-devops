@@ -1,3 +1,0 @@
-if [ -z "$(ssh-keygen -f $34.229.67.42)" ]; then
-	ssh-keyscan -H $34.229.67.42 >> ~/ .ssh/school
-fi
