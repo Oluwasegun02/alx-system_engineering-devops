@@ -1,37 +1,20 @@
-# Install Nginx package
-package { 'nginx':
-  ensure => installed,
+#setup nginx
+
+package {
+    'nginx':
+    ensure => installed,
 }
 
-# Start Nginx service
-service { 'nginx':
-  ensure => running,
-  enable => true,
+file {'/var/www/html/index.nginx-debian.html':
+    content => 'Hello World!',
 }
 
-# Configure Nginx server
-file { '/etc/nginx/sites-available/default':
-  ensure => file,
-  content => "
-server {
-    listen 80;
-    listen [::]:80;
-
-    root /var/www/html;
-
-    index index.html index.html;
-
-    server_name _;
-
-    location / {
-        try_files \$uri \$uri/ =404;
-        proxy_pass http://127.0.0.1:5000/;
-    }
-
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=Ubqlq3JkG6I&t=158s/;
-    }
+file_line {'configure redirection':
+    path  =>  '/etc/nginx/sites-available/default',
+    after =>  'server_name _;',
+    line  =>  "\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=Ubqlq3JkG6I&t=158s/;\n\t}\n",
 }
-",
-  notify => Service['nginx'],
+
+service {'nginx':
+    ensure => running,
 }

@@ -1,18 +1,13 @@
 #!/usr/bin/env bash
 
-
-# Update package index
-sudo apt-get update
-
-# Install Nginx
-sudo apt-get install -y nginx
-
-# Create a backup of the default Nginx configuration
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-
-# Use sed to replace the default Nginx configuration with a new configuration that redirects requests from /redirect_me to another page with a 301 Moved Permanently status
-sudo sed -i '/server_name _;/a \\\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=Ubqlq3JkG6I&t=158s;\n\t}\n' /etc/nginx/sites-available/default
-
-# Restart Nginx to apply the new configuration
-sudo service nginx restart
-
+#Configure your Nginx server so that /redirect_me is redirecting to another page.
+#The redirection must be a “301 Moved Permanently”
+STRING="Hello World!"
+REDIRECT="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4; \n\t}\n"
+FILE="/etc/nginx/sites-available/default"
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "$STRING" > /var/www/html/index.nginx-debian.html
+sed -i "37i\ $REDIRECT" "$FILE"
+service nginx restart

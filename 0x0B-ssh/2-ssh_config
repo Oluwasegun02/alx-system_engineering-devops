@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-cat >> ~/.ssh/config <<EOF
+#
 Host 8c9f6e0a1e54
-  IdentityFile ~/.ssh/school
-  PasswordAuthentication no
-EOF
+  Hostname 34.229.67.42
+	User ubuntu
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school

@@ -28,3 +28,8 @@ Requirements:
 Must use the exec Puppet resource
 Must use pkill
 
+https://www.puppet.com/docs/puppet/5.5/types/file.html
+https://www.puppet.com/blog
+http://puppet-lint.com/developer/tutorial/
+https://www.puppet.com/docs/puppet/5.5/types/file.html#file-attribute-path
+https://www.puppet.com/docs/puppet/5.5/puppet_index.html
