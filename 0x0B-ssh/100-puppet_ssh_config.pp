@@ -1,8 +1,11 @@
-#!/usr/bin/env bash
-if [ ! -f ~/.ssh/config ]; then
-    touch ~/.ssh/config
-    chmod 600 ~/.ssh/config
-fi
-echo "Host *
-    IdentityFile ~/.ssh/school
-    PasswordAuthentication no" >> ~/.ssh/config
+# Configure ssh 
+file_line{'Turn off passwd auth':
+path => '/etc/ssh/ssh_config',
+line => 'PasswordAuthentication no'
+}
+
+file_line{'Declare identity file':
+path => '/etc/ssh/ssh_config',
+line => 'IdentityFile ~/.ssh/school'
+
+}
