@@ -1,0 +1,60 @@
+https://www.linkedin.com/pulse/what-happens-when-you-type-googlecom-your-browser-press-adegboyega 
+What happens when type "https://www.google.com" in your browser 
+
+I don't know if you wonder what happened when you press enter and the webpage appears on your screen within a few seconds whereas a lot happens behind the scenes which makes it possible, let takes a clearer look.
+
+
+
+DNS Request:
+
+Immediately you type a URL in your browser it sends it to DNS ( Domain Name Systems) server to resolve the name into an IP address, so the DNS server looks up the IP address associated with the domain name and sends it back to the browser.
+
+
+
+TCP/IP:
+
+Once the server gets the IP address it opens a TCP (Transmission Control Protocol) connection to the web server that hosts the website, this ensures that data sent between browser and server is reliable and error free.
+
+
+
+FIREWALL:
+
+Before the browser can establish a connection with the web server, it must pass through any firewalls or security measures in place. These firewalls protect the server from unauthorized access and attacks.
+
+
+
+HTTPS/SSL:
+
+If the website uses HTTPS (Hyper Text Transfer Protocol Secure), the browser will negotiate an SSL (Secure Sockets Layer) connection with the web server. This SSL connection encrypts all data sent between the browser and server, ensuring that it cannot be intercepted by anyone else.
+
+
+
+LOAD-BALANCER:
+
+This is for large websites that receive a lot of traffic, there may be multiple web servers behind a load-balancer. The load-balancer distributes incoming traffic across the web servers to ensure that no single server gets overloaded.
+
+
+
+ WEB SERVER:
+
+Once connected, web sever receives the HTTP (Hyper Text Transfer Protocol) request from browser, web server processes the request to generates HTTP response which contain source code (html, CSS, JavaScript etc.) and others material to display webpage.
+
+
+
+APPLICATION SERVER:
+
+There is Static and dynamic website Application server is used for dynamic website cause it give responses dynamically.
+
+This is for dynamic websites that generate content on fly, application server may involve, this server processes requests from web server to generates responses dynamically, based on user's input.
+
+
+
+DATABASE:
+
+At Last, if the website needs to access a database to retrieve or store data, the application server will communicate with the database server to perform these operations.
+
+
+
+CONCLUSION:
+
+When every you are typing "https://www.google.com" in your browser and pressing Enter is a complex process that involves multiple steps, from resolving the domain name to retrieving and displaying the webpage. Understanding how these steps work together is essential for building and maintaining websites that are fast, secure, and reliable. As users, we may take these steps for granted, but for developers and system administrators, it is crucial to understand and optimize them to deliver a seamless browsing experience to users. Next time you browse the web, take a moment to appreciate the complex and intricate processes that happen behind the scenes to make it all possible.
