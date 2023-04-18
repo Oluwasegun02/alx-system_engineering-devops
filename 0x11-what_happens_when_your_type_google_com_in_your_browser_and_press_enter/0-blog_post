@@ -1,4 +1,6 @@
 https://www.linkedin.com/pulse/what-happens-when-you-type-googlecom-your-browser-press-adegboyega 
+
+https://www.canva.com/design/DAFgTmyQwcc/-bsvVvilnZI57qJ_WD_xEg/view?utm_content=DAFgTmyQwcc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 What happens when type "https://www.google.com" in your browser 
 
 I don't know if you wonder what happened when you press enter and the webpage appears on your screen within a few seconds whereas a lot happens behind the scenes which makes it possible, let takes a clearer look.
@@ -58,3 +60,5 @@ At Last, if the website needs to access a database to retrieve or store data, th
 CONCLUSION:
 
 When every you are typing "https://www.google.com" in your browser and pressing Enter is a complex process that involves multiple steps, from resolving the domain name to retrieving and displaying the webpage. Understanding how these steps work together is essential for building and maintaining websites that are fast, secure, and reliable. As users, we may take these steps for granted, but for developers and system administrators, it is crucial to understand and optimize them to deliver a seamless browsing experience to users. Next time you browse the web, take a moment to appreciate the complex and intricate processes that happen behind the scenes to make it all possible.
+
+https://github.com/Oluwasegun02/what-happens-when/blob/master/README.rst
