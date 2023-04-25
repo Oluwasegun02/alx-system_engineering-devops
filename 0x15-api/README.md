@@ -1,4 +1,14 @@
 0x15. API
+giude:
+https://jsonplaceholder.typicode.com/
+https://peps.python.org/pep-0008/
+https://www.sitepoint.com/rest-api/
+https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/
+https://www.webopedia.com/definitions/api/
+https://www.turnkeylinux.org/blog/friends-dont-let-friends-program-shell-script
+https://intranet.alxswe.com/projects/269
+https://docs.python.org/3.4/library/stdtypes.html#dict.get
+
 Python
 Scripting
 Back-end
