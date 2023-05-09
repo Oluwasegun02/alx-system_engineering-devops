@@ -22,3 +22,16 @@ if __name__ == '__main__':
     for todo in todo_result:
         if (todo.get("completed")):
             print("\t {}".format(todo.get("title")))
+
+filename = f"{employee_id}.csv"
+with open(filename, mode="w", newline="") as csv_file:
+    fieldnames = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
+    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    writer.writeheader()
+    for task in tasks_data:
+        writer.writerow({
+            "USER_ID": employee_id,
+            "USERNAME": employee_name,
+            "TASK_COMPLETED_STATUS": "completed" if task["completed"] else "not completed",
+            "TASK_TITLE": task["title"]
+        })
